@@ -1,0 +1,2 @@
+total_time_s,packet_sent,packet_received,packet_dropped,packet_dropped_pct,min_latency_s,max_latency_s,avg_latency_s,sd_latency_s,avg_jitter_s,sd_jitter_s,bytes_received,avg_bitrate,sd_bitrate,avg_packetrate_pkts,round
+1423.9766991138458,100,48,52,52.0,13.897593021392822,343.0466160774231,131.23609961072603,111.8358523276397,12.124556675553322,13.385424046233732,62688.0,605.9839999999999,920.9266508671215,0.03370841673875061,1

@@ -1,0 +1,10 @@
+model=ProbRandomWalk
+ignore=500000.0
+randomSeed=1597660797921
+x=25000.0
+y=25000.0
+duration=10200.0
+nn=1
+circular=true
+J=2D
+interval=50.0

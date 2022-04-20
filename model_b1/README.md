@@ -21,8 +21,8 @@ Execute the script [datarate_to_trace](datarate_to_trace.py) to create mobility 
 python datarate_to_trace.py
 ```
 
-For more details regarding the configuration and creation of the stochastic model see the repository 
-[ever-changing](https://github.com/deepboltzer/ever-changing) and the brief description below.
+A brief description of the model is shown below. For more details regarding the configuration and creation of the 
+stochastic model see the repository [ever-changing](https://github.com/deepboltzer/ever-changing). 
 
 _**Note:** Additional important information for the usage of this project can be found in the comments of the python scripts.
 We strongly recommend looking into the code of those files before using them._

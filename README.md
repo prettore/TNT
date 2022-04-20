@@ -36,8 +36,8 @@ python setup.py install
 ## Getting Started
 TNT was instantiated to perform experiments over real military radios, thus the infrastructure consists of VHF radios,
 Linux QDISC, the link disconnection prototype, and a data monitoring and analysis process to measure the data sent and
-received, computing the packets and the trace statistics through a single script (orchestrator) 
-[auto_testbed_experiment](experiment_testbed/auto_testbed_experiment.py), as illustrated in the figure below. 
+received, computing the packets and the trace statistics through a single script (orchestrator -
+[auto_testbed_experiment](experiment_testbed/auto_testbed_experiment.py)), as illustrated in the figure below. 
 
 ![TNT Setup](img/setup.png)
 
@@ -49,11 +49,11 @@ In this figure, TNT orchestrates the experiment by deploying all necessary scrip
 the experiment starts. After the user configures the experiment (radio ip address, disconnection prototype ip address, 
 trace files, interval between experiments, duration of the whole experiment, etc...), TNT starts the experiment deploying: 
 
-###(1) 
-The application on the sender [itg_sender](experiment_testbed/itg_sender.py) and receiver 
-[itg_receiver](experiment_testbed/itg_receiver.py) nodes (representing the user data flow - client and server); 
+### (1) 
+The application on the sender ([itg_sender](experiment_testbed/itg_sender.py)) and receiver 
+([itg_receiver](experiment_testbed/itg_receiver.py)) nodes (representing the user data flow - client and server); 
 
-###(2)
+### (2)
 The network changes mechanism and the network scenarios based on mobility traces 
 (Model B1 - [model_b1](model_b1/README.md), Model B2 - [model_b2](model_b2/README.md))
 in the sender node, which has the interface with the radio and with the link disconnection prototype as shown in the figure below 
@@ -61,38 +61,38 @@ in the sender node, which has the interface with the radio and with the link dis
 
 ![Ever-changing Network Scenario](img/Design_TNT_network.png)
 
-###(3) 
+### (3) 
 The military system (here the adaptive data flow - shaping mechanism) is shown in the figures below on
-the sender node in order to avoid buffer overflow [data_shaping](military_system/data_shaping.py);  For more details, 
+the sender node in order to avoid buffer overflow ([data_shaping](military_system/data_shaping.py));  For more details, 
 please read the referred article.
 
 ![TNT shaping](img/shaping.png) 
 
 ![TNT shaping_equation](img/shaping_eq.png)
 
-###(4) 
-The monitoring and data analysis which collect, prepare ([tb_data_acquisition](experiment_testbed/tb_data_acquisition.py)
-),  processing [tb_packet_processing](experiment_testbed/tb_packet_processing.py) and visualize the experiment outputs 
-[main_data_analysis](data_analysis/main_data_analysis.R) using R.
+### (4) 
+The monitoring and data analysis which collect, prepare ([tb_data_acquisition](experiment_testbed/tb_data_acquisition.py)), 
+processing ([tb_packet_processing](experiment_testbed/tb_packet_processing.py)) and visualize the experiment outputs 
+([main_data_analysis](data_analysis/main_data_analysis.R)) using R.
 
 _**Note:** Additional important information for the usage of this project can be found in the comments of the python scripts.
 We strongly recommend looking into the code of those files before using them._
 
 ### The experiment setup
-The experiments reported in the referred article and the data available (([statistics](experiment_testbed/data) 
+The experiments reported in the referred article and the data available ([statistics](experiment_testbed/data) and 
 [data_analysis](data_analysis/img)) follows the setup described below: 
 
 The tactical network is composed of two VHF radios (PR4G), with 128kb of buffer size and supporting five data
 rates {0.6, 1.2, 2.4, 4.8, 9.6} kbps, each connected to a node (sender and receiver, respectively). The radio antennas are
 wired and connected to a link disconnection prototype in order to simulate the state {0}, disconnection. Then, the network
-condition is changed using mobility traces as described in  [Section](##Models to change network scenarios). 
-The experimental setup with all components used by TNT is described in the Table below.
+condition is changed using mobility traces as described in  Model B1 - [model_b1](model_b1/README.md) and 
+Model B2 - [model_b2](model_b2/README.md). The experimental setup with all components used by TNT is described in the Table below.
 
 ![TNT Setup_Table](img/table.png)
 
 How to cite
 ----
-If you decided to use this prototype, please, refer to it as:
+If you decided to use this project or part of it, please, refer to it as:
 
 -  Rettore, Paulo H.; Loevenich, Johannes; Rigolin F. Lopes, Roberto; Sevenich, Peter (2021): "TNT: A Tactical Network Test platform to evaluate military systems over ever-changing scenarios", in IEEE/ACM Transactions on Networking, TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.14141501.v1 
 

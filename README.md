@@ -1,5 +1,5 @@
 # TNT: A Tactical Network Test platform to evaluate military systems over ever-changing scenarios
-//[![N|Solid](https://www.fkie.fraunhofer.de/content/dam/fkie/fkie.svg)](https://www.fkie.fraunhofer.de)
+<!--- [![N|Solid](https://www.fkie.fraunhofer.de/content/dam/fkie/fkie.svg)](https://www.fkie.fraunhofer.de) --->
 
 TNT platform is designed to automate tests to evaluate military systems and 
 applications over a variety of network conditions and user data flows. 

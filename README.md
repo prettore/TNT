@@ -7,7 +7,7 @@ The test results are composed by the system performance evaluation and the
 test scenario characterization.
 
 ## TNT Design
-![TNT Design](img/Design_TNT.png)
+%![TNT Design](img/Design_TNT.png)
 
 
 ### Dependencies
